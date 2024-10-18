@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Navbar(){
+    const navigate = useNavigate()
+
     return(
         <>
         <nav className="w-screen fixed z-10 top-0">
@@ -8,7 +12,7 @@ export default function Navbar(){
                 </div>
                 <div className="pr-5">
                     <ul className="flex flex-row gap-10">
-                        <li><a className="hover:text-kuning" href="#">Beranda</a></li>
+                        <li><a className="hover:text-kuning" href="#" onClick={()=>{navigate('/')}}>Beranda</a></li>
                         <li>
                             <a className="hover:text-kuning"  href="#profil">Profil</a>
                         </li>
