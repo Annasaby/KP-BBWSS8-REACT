@@ -14,19 +14,19 @@ export default function Navbar(){
                     <ul className="flex flex-row gap-10">
                         <li><a className="hover:text-kuning" href="#" onClick={()=>{navigate('/')}}>Beranda</a></li>
                         <li>
-                            <a className="hover:text-kuning"  href="#profil">Profil</a>
+                            <a className="hover:text-kuning"  href="#profil" onClick={()=>{navigate('/')}}>Profil</a>
                         </li>
                         <li className="flex flex-row items-center">
-                            <a className="hover:text-kuning" href="#berita">Berita</a>
+                            <a className="hover:text-kuning" href="#berita" onClick={()=>{navigate('/')}}>Berita</a>
                         </li>
                         <li className="">
-                            <a className="hover:text-kuning" href="#galeri">Galeri</a>
+                            <a className="hover:text-kuning" href="#galeri" onClick={()=>{navigate('/')}}>Galeri</a>
                         </li>
                         <li className="">
-                            <a className="hover:text-kuning" href="#layanan-terpadu">Layanan Terpadu</a>
+                            <a className="hover:text-kuning" href="#layanan-terpadu" onClick={()=>{navigate('/')}}>Layanan Terpadu</a>
                         </li>
                         <li>
-                            <a className="hover:text-kuning" href="#faq">FAQ</a>
+                            <a className="hover:text-kuning" href="#faq" onClick={()=>{navigate('/')}}>FAQ</a>
                         </li>
                     </ul>
                 </div>
