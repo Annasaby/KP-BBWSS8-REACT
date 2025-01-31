@@ -15,12 +15,12 @@ export default function Home(){
             </header>
 
             {/* Profil */}
-            <section className="w-screen flex justify-center items-center mt-32">
+            <section id="profil" className="w-screen flex justify-center items-center pt-20 md:mt-32">
                 <div className="relative w-4/5 flex flex-row-reverse justify-start items-center bg-gradient-to-bl from-[#FFC928] to-[#FFDA6B] shadow-lg rounded-3xl ">
-                    <div className="absolute left-0 bottom-0">
+                    <div className="hidden md:block absolute left-0 bottom-0">
                         <img id="profil" className="h-96 z-[9]" src={'/src/assets/images/mamangfix.png'} alt="foto mamang" />
                     </div>
-                    <div className="w-1/2 flex flex-col gap-5 my-5 mr-5">
+                    <div className="md:w-1/2 flex flex-col gap-5 my-5 ml-5 md:ml-0 mr-5">
                         <h2 className="text-3xl font-medium text-[#364773]">Balai Besar Wilayah Sungai Sumatera VIII</h2>
                         <p className="text-xs text-[#364773]">Mengelola sumber daya air di wilayah sungai meliputi perencanaan, pelaksanaan konstruksi, operasi, dan pemeliharaan untuk konservasi dan pemanfaatan sumber daya air, serta pengendalian daya rusak air pada sungai, pantai, bendungan, danau, situ, embung, tampungan air lainnya, irigasi, rawa, tambak, air tanah, air baku, dan drainase utama perkotaan.</p>
                         <button className=" bg-[#364773] hover:bg-slate-500 w-fit px-5 py-2 rounded-md text-white text-sm font-normal transition duration-300 ease-in-out hover:scale-105" onClick={()=>{navigate('/profil')}}>Selengkapnya</button>
@@ -30,7 +30,7 @@ export default function Home(){
 
             
             {/* Berita */}
-            <section id="berita" className="w-screen flex justify-center items-center mt-32 bg-biru-muda">
+            <section id="berita" className="w-screen flex justify-center items-center mt-5 md:mt-32 bg-biru-muda">
                 <div className="w-4/5 my-16">
                     {/* Judul */}
                     <div className="mb-5">
@@ -38,9 +38,9 @@ export default function Home(){
                         <p className="text-sm font-light">EDISI TAHUN 2024</p>
                     </div>
                     {/* Container berita */}
-                    <div className="relative w-full flex gap-5 py-3">
+                    <div className="relative w-full flex flex-col md:flex-row gap-5 py-3">
                         {/* Berita Utama */}
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                             <div className=" flex justify-center items-center">
                                 <div className="absolute top-0 left-0 h-12 w-10 rounded-md bg-yellow-300 z-[9]"></div>
                                 <a className="relative" onClick={()=>{navigate('/berita')}}>
@@ -54,7 +54,7 @@ export default function Home(){
                             </div>
                         </div>
                         {/* Berita lainnya */}
-                        <div className="w-1/2 h-96 overflow-auto">
+                        <div className="md:w-1/2 h-60 md:h-96 overflow-auto">
                             {/* Berita 1 */}
                             <div className="flex gap-5 mb-5">
                                 <a onClick={()=>{navigate('/berita')}}>
@@ -138,26 +138,26 @@ export default function Home(){
             
             {/* Galeri */}
             <section id="galeri" className="w-screen flex justify-center items-center pt-32">
-                <div className="w-4/5 flex gap-5">
-                    <div className="w-1/3 flex flex-col justify-between">
+                <div className="w-4/5 flex flex-col md:flex-row gap-5">
+                    <div className="md:w-1/3 flex flex-col justify-between">
                         <div>
                             <h2 className="text-3xl font-bold">Galeri</h2>
                         </div>
                         <div>
                             <h5 className="text-xl font-semibold mb-2">100+ Wilayah Perairan <br /> <span className="text-[#FFC928]">Di Seluruh Sumatra</span></h5>
-                            <p className="text-xs leading-8">
+                            <p className="hidden md:block text-xs leading-8">
                                 Merupakan detail data rekap jumlah aset dan infrastruktur yang terdata didalam Water Resources Data Center (WRDC)yang mana mencakup seluruh Balai Wilayah Sungai atau Balai Besar Wilayah Sungai
                             </p>
                         </div>
                         <button className="w-fit py-2 px-5 bg-[#FFC928] hover:bg-yellow-300 transition duration-300 ease-in-out hover:scale-105 rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md text-white text-sm font-medium"  onClick={()=>{navigate('/galeri')}}>Selengkapnya</button>
                     </div>
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-5 w-52 md:w-full">
                         <div className="">
-                            <img className="h-96" src={'/src/assets/images/galeri1.png'} alt="danau" />
+                            <img className="md:h-96 object-contain" src={'/src/assets/images/galeri1.png'} alt="danau" />
                         </div>
                         <div className="flex gap-5 items-center">
-                            <img className="h-72" src={'/src/assets/images/galeri2.png'} alt="danau" />
-                            <img className="h-60" src={'/src/assets/images/galeri3.png'} alt="danau" />
+                            <img className="md:h-72 object-contain" src={'/src/assets/images/galeri2.png'} alt="danau" />
+                            <img className="md:h-60 object-contain" src={'/src/assets/images/galeri3.png'} alt="danau" />
                         </div>
                     </div>
                 </div>
@@ -171,41 +171,23 @@ export default function Home(){
                         <h2 className="text-3xl font-bold">Layanan Terpadu</h2>
                     </div>
                     {/* container */}
-                    <div className="grid grid-cols-4 justify-center items-center gap-y-5">
-                        <div className="grid justify-center items-center">
-                            <a onClick={()=>{navigate('/layanan')}}>
-                            <img className=" w-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/laporMang.png'} alt="Lapor mang" />
-                            </a>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+                        <div className="flex flex-col items-center" onClick={() => { navigate('/layanan') }}>
+                            <img className="w-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/laporMang.png'} alt="Lapor Mang" />
+                            <h5 className="font-semibold text-lg text-gray-500 hover:text-gray-800 mt-2">LaporMang</h5>
                         </div>
-                        <div className="grid justify-center items-center">
-                            <a href="https://www.google.com">
-                            <img className=" w-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/hidrologi.png'} alt="Hidrologi" />
-                            </a>
+                        <div className="flex flex-col items-center">
+                            <img className="w-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/hidrologi.png'} alt="Hidrologi" />
+                            <h5 className="font-semibold text-lg text-gray-500 hover:text-gray-800 mt-2">Hidrologi</h5>
                         </div>
-                        <div className="grid justify-center items-center">
-                            <a onClick={()=>{navigate('/layanan')}}>
-                            <img className=" w-56 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/saran.png'} alt="Saran dan pengaduan" />
-                            </a>
+                        <div className="flex flex-col items-center">
+                             <img className="w-56 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/saran.png'} alt="Saran dan pengaduan" />
+                            <h5 className="font-semibold text-lg text-gray-500 hover:text-gray-800 mt-2">Saran dan Pengaduan</h5>
                         </div>
-                        <div className="grid justify-center items-center">
-                            <a onClick={()=>{navigate('/layanan')}}>
-                            <img className=" w-56 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/bencana.png'} alt="Bencana" />
-                            </a>
+                        <div className="flex flex-col items-center">
+                            <img className="w-56 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/bencana.png'} alt="Bencana" />
+                            <h5 className="font-semibold text-lg text-gray-500 hover:text-gray-800 mt-2">Bencana</h5>
                         </div>
-                        
-                        <a onClick={()=>{navigate('/layanan')}}>
-                        <h5 className="grid justify-center items-center font-semibold text-lg text-gray-500 hover:text-gray-800">LaporMang</h5>
-                        </a>
-                        <a href="https://google.com">
-                        <h5 className="grid justify-center items-center font-semibold text-lg text-gray-500 hover:text-gray-800">hidrologi</h5>
-                        </a>
-                        <a onClick={()=>{navigate('/layanan')}}>
-                        <h5 className="grid justify-center items-center font-semibold text-lg text-gray-500 hover:text-gray-800">Saran dan Pengaduan</h5>
-                        </a>
-                        <a onClick={()=>{navigate('/layanan')}}>
-                        <h5 className="grid justify-center items-center font-semibold text-lg text-gray-500 hover:text-gray-800">Bencana</h5>
-                        </a>
-                        
                     </div>
                 </div>
             </section>
@@ -216,7 +198,7 @@ export default function Home(){
             <section className="w-screen flex justify-center items-center mt-16">
                 <div className="w-4/5 flex flex-col justify-center items-center gap-5">
                     <h2 className="text-3xl font-semibold">Aplikasi & Link Terkait</h2>
-                    <div className="flex w-full justify-between">
+                    <div className="flex flex-wrap gap-4 w-full justify-between">
                         <img src={'/src/assets/images/apk1.png'} alt="apk1" />
                         <img src={'/src/assets/images/apk2.png'} alt="apk2" />
                         <img src={'/src/assets/images/apk3.png'} alt="apk3" />

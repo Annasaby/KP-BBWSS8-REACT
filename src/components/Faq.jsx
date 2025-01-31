@@ -18,9 +18,9 @@ export default function Faq(){
                 <h5 className="text-kuning font-medium">FAQ</h5>
                 <h2 className="text-3xl font-medium">Frequently Asked Questions</h2>
             </div>
-            <div className="flex gap-5 transition duration-300 ease-in-out">
+            <div className="flex flex-col md:flex-row gap-5 transition duration-300 ease-in-out">
                 {/* Pertanyaan jawaban */}
-                <div className="flex flex-col gap-5 w-1/2">
+                <div className="flex flex-col gap-5 md:w-1/2">
                     <div className="flex gap-2 cursor-pointer" onClick={()=>{handleClick(0)}}>
                         <FiChevronDown  className="text-kuning w-10"/>
                         <div  className="w-4/5">
@@ -78,7 +78,7 @@ export default function Faq(){
                     </div>
                 </div>
                 {/* Form */}
-                <div className="flex flex-col items-center gap-10 w-1/2 px-5">
+                <div className="flex flex-col items-center gap-10 md:w-1/2 px-5">
                     <h2 className="text-2xl font-semibold">Tanyakan hal lain</h2>
                     <form action="/send_email" method="post" className="flex flex-col justify-center items-center gap-5 w-full">
                         <div className="w-full">
