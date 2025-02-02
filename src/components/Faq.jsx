@@ -78,7 +78,7 @@ export default function Faq(){
                     </div>
                 </div>
                 {/* Form */}
-                <div className="flex flex-col items-center gap-10 md:w-1/2 px-5">
+                <div className="flex flex-col items-center gap-10 md:w-1/2 mt-10 md:mt-0 px-5">
                     <h2 className="text-2xl font-semibold">Tanyakan hal lain</h2>
                     <form action="/send_email" method="post" className="flex flex-col justify-center items-center gap-5 w-full">
                         <div className="w-full">
