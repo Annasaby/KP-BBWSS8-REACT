@@ -13,8 +13,8 @@ export default function Profil(){
             <header className="w-screen flex justify-center items-center mt-20">
                 <div className="w-4/5 flex flex-col items-center">
                     <img className="w-full mb-5" src={'/src/assets/images/jumbotron-profil.png'} alt="jumbotron"/>
-                    <div className="mx-10 flex flex-col items-center gap-1">
-                        <h5 className="text-2xl font-semibold text-biru">Balai Besar Wilayah Sungai Sumatera VIII</h5>
+                    <div className="md:mx-10 flex flex-col items-center gap-1">
+                        <h5 className="text-center text-2xl font-semibold text-biru">Balai Besar Wilayah Sungai Sumatera VIII</h5>
                         <p className="text-center text-xs leading-7">Melaksanakan pengelolaan sumber daya air di wilayah sungai yang meliputi perencanaan, pelaksanaan konstruksi, operasi dan pemeliharaan dalam rangka konservasi dan pendayagunaan sumber daya air dan pengendalian daya rusak air pada sungai, pantai, bendungan, danau, situ, embung, dan tampungan air lainnya, irigasi, rawa, tambak, air tanah, dan air baku serta pengelolaan drainase utama perkotaan.</p>
                     </div>
                 </div>
@@ -22,26 +22,26 @@ export default function Profil(){
 
             {/* Info */}
             <section className="w-screen flex justify-center items-center mt-20">
-            <div className="w-4/5 py-10 grid grid-cols-4 bg-biru opacity-80 rounded-xl p-5 text-white place-items-center gap-y-3">
-                <FiHome />
-                <FiMapPin />
-                <FiMap />
-                <FiGlobe />
+            <div className="w-4/5 py-10 p-1 md:p-5 grid grid-cols-4 bg-biru opacity-80 rounded-xl text-white place-items-start md:place-items-center">
                 <div className="flex flex-col items-center gap-2">
+                    <FiHome />
                     <h5 className="font-medium text-lg">Balai</h5>
-                    <p className="text-center font-extralight text-xs w-4/5">Balai Besar Wilayah Sungai Sumatera VIII</p>
+                    <p className="text-center font-extralight text-[10px] md:text-xs w-4/5">Balai Besar Wilayah Sungai Sumatera VIII</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
+                    <FiMapPin />
                     <h5 className="font-medium text-lg">Lokasi</h5>
-                    <p className="text-center font-extralight text-xs">Jl. Soekarno-Hatta No.869, Palembang, Sumatera Selatan 30151</p>
+                    <p className="text-center font-extralight text-[10px] md:text-xs">Jl. Soekarno-Hatta No.869, Palembang, Sumatera Selatan 30151</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
+                    <FiMap />
                     <h5 className="font-medium text-lg">Wilayah</h5>
-                    <p className="text-center font-extralight text-xs w-4/5">WS Musi-Lemau-Banyuasin, WS Bangka</p>
+                    <p className="text-center font-extralight text-[10px] md:text-xs w-4/5">WS Musi-Lemau-Banyuasin, WS Bangka</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
+                    <FiGlobe />
                     <h5 className="font-medium text-lg">Klasifikasi</h5>
-                    <p className="text-center font-extralight text-xs w-4/5">Balai Besar Wilayah Sungai Tipe A</p>
+                    <p className="text-center font-extralight text-[10px] md:text-xs w-4/5">Balai Besar Wilayah Sungai Tipe A</p>
                 </div>
             </div>
             </section>
@@ -52,16 +52,16 @@ export default function Profil(){
                     <div>
                         <h2 className="text-3xl font-semibold">MOTTO DAN LAMBANG KEMENTERIAN</h2>
                     </div>
-                    <div className="flex items-center self-center">
+                    <div className="flex flex-col md:flex-row gap-5 md:gap-0 items-center self-center">
                         <div className="">
-                            <img className="h-40" src={'/src/assets/images/logoAjah.png'} alt="logo PUPR" />
+                            <img className="h-40 object-contain" src={'/src/assets/images/logoAjah.png'} alt="logo PUPR" />
                         </div>
-                        <div className="w-60 h-96 py-10 px-5 flex flex-col justify-center bg-[#6274A1] rounded-tl-lg rounded-tr-[45px] rounded-bl-[45px] rounded-br-lg text-white">
+                        <div className="w-60 md:h-96 py-10 p-1 md:px-5 flex flex-col justify-center bg-[#6274A1] rounded-tl-lg rounded-tr-[45px] rounded-bl-[45px] rounded-br-lg text-white">
                             <h5 className="text-lg font-semibold">Makna Logo</h5>
                             <hr className="w-10 border-t-2 border-yellow-400 mb-3" />
                             <p className="text-xs font-light leading-5">Menggambarkan peran Kementerian Pekerjaan Umum dan Perumahan Rakyat dalam mewujudkan infrastruktur yang handal untuk mendukung Indonesia yang berdaulat, mandiri, dan berkepribadian berlandaskan gotong royong.</p>
                         </div>
-                        <div className="w-60 h-80 py-10 px-5 flex flex-col justify-center bg-white rounded-tl-lg rounded-tr-[45px] rounded-bl-lg rounded-br-lg shadow-[5px_5px_2px_1px] shadow-gray-300">
+                        <div className="w-60 md:h-80 py-10 px-1 md:px-5 flex flex-col justify-center bg-white rounded-tl-lg rounded-tr-[45px] rounded-bl-lg rounded-br-lg shadow-[5px_5px_2px_1px] shadow-gray-300">
                             <h5 className="text-lg font-semibold">Makna Warna</h5>
                             <hr className="w-10 border-t-2 border-yellow-400 mb-3" />
                             <div className="flex gap-3 mb-3">
@@ -79,7 +79,7 @@ export default function Profil(){
 
             {/* Visi Misi */}
             <section className="w-screen flex justify-center items-center mt-20 bg-biru-muda">
-                <div className="w-4/5 flex justify-center gap-20 my-5">
+                <div className="w-4/5 flex justify-center gap-7 md:gap-20 my-5">
                     <div className="w-96 flex flex-col gap-3">
                         <h3 className="text-2xl font-semibold">VISI</h3>
                         <hr className="w-10 border-t-2 border-yellow-400" />
@@ -111,7 +111,7 @@ export default function Profil(){
                         <h3 className="text-2xl font-semibold">Fungsi</h3>
                         <hr className="w-full border-t-2 border-yellow-400" />
                     </div>
-                    <div className="flex gap-20">
+                    <div className="w-full md:w-fit flex flex-wrap md:gap-20">
                         <div className="w-96">
                             <ul className="list-disc text-sm">
                                 <li>Penyusunan Pola PSDA dan Rencana PSDA pada WS</li>
@@ -152,7 +152,7 @@ export default function Profil(){
             <section className="w-screen flex justify-center items-center mt-20">
                 <div className="w-4/5 flex flex-col items-center gap-10">
                     <h2 className="text-3xl font-semibold">STRUKTUR ORGANISASI</h2>
-                    <img className="h-96" src={'/src/assets/images/strukturOrganisasi.png'} alt="struktur organisasi" />
+                    <img className="md:h-96 object-contain" src={'/src/assets/images/strukturOrganisasi.png'} alt="struktur organisasi" />
                 </div>
             </section>
             <Footer />

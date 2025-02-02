@@ -42,9 +42,9 @@ export default function Home(){
                         {/* Berita Utama */}
                         <div className="md:w-1/2">
                             <div className=" flex justify-center items-center">
-                                <div className="absolute top-0 left-0 h-12 w-10 rounded-md bg-yellow-300 z-[9]"></div>
                                 <a className="relative" onClick={()=>{navigate('/berita')}}>
-                                    <img className="h-80 rounded-lg transition duration-300 ease-in-out hover:opacity-80" src={'/src/assets/images/Berita.png'} alt="berita utama" />
+                                    <div className="absolute top-0 left-0 h-12 w-10 rounded-md bg-yellow-300 z-[9] -translate-x-5 -translate-y-3"></div>
+                                    <img className="h-80 rounded-lg transition duration-300 ease-in-out hover:opacity-80 object-cover" src={'/src/assets/images/Berita.png'} alt="berita utama" />
                                 </a>
                             </div>
                             <div className="flex p-5 gap-2">
@@ -171,7 +171,7 @@ export default function Home(){
                         <h2 className="text-3xl font-bold">Layanan Terpadu</h2>
                     </div>
                     {/* container */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 place-items-baseline">
                         <div className="flex flex-col items-center" onClick={() => { navigate('/layanan') }}>
                             <img className="w-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={'/src/assets/images/laporMang.png'} alt="Lapor Mang" />
                             <h5 className="font-semibold text-lg text-gray-500 hover:text-gray-800 mt-2">LaporMang</h5>
